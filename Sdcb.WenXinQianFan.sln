@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "解决方案项", "解决�
 	ProjectSection(SolutionItems) = preProject
 		LICENSE.txt = LICENSE.txt
 		README.md = README.md
+		README_EN.md = README_EN.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sdcb.WenXinQianFan.Tests", "Sdcb.WenXinQianFan.Tests\Sdcb.WenXinQianFan.Tests.csproj", "{173B74AB-44B8-48CF-8825-5AD629D2210A}"
