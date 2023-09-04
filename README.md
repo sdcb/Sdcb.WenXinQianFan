@@ -78,7 +78,7 @@ Console.WriteLine(sb.ToString());
 | ChatGLM2_6B_32K | 智谱AI与清华KEG实验室发布的中英双语对话模型，能够更好的处理最多32K长度的上下文。 |
 | AquilaChat_7B | 由智源研究院研发，基于Aquila-7B训练的对话模型，支持流畅的文本对话及多种语言类生成任务，通过定义可扩展的特殊指令规范，实现 AquilaChat对其它模型和工具的调用，且易于扩展。 |
 
-最新的列表可以在[官网这里(https://cloud.baidu.com/doc/WENXINWORKSHOP/s/Nlks5zkzu)]了解。
+最新的列表可以在[官网这里](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/Nlks5zkzu)了解。
 
 ## 许可证
 
