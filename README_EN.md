@@ -1,6 +1,6 @@
 # Sdcb.WenXinQianFan [![NuGet](https://img.shields.io/nuget/v/Sdcb.WenXinQianFan.svg?style=flat-square&label=nuget)](https://www.nuget.org/packages/Sdcb.WenXinQianFan/) [![NuGet](https://img.shields.io/nuget/dt/Sdcb.WenXinQianFan.svg?style=flat-square)](https://www.nuget.org/packages/Sdcb.WenXinQianFan/) [![GitHub](https://img.shields.io/github/license/sdcb/Sdcb.WenXinQianFan.svg?style=flat-square&label=license)](https://github.com/sdcb/Sdcb.WenXinQianFan/blob/master/LICENSE.txt)
 
-**English** | **[¼òÌåÖÐÎÄ](README.md)**
+**English** | **[ç®€ä½“ä¸­æ–‡](README.md)**
 
 `Sdcb.WenXinQianFan` is an unofficial open-source project, providing a .NET client for the WenXin QianFan API. This project can be used to develop chatbots and virtual assistants capable of communicating with users in natural language.
 
