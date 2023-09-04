@@ -4,6 +4,10 @@
     <TargetFrameworks>net6;netstandard2.0</TargetFrameworks>
     <LangVersion>11</LangVersion>
     <Nullable>enable</Nullable>
+    <Description>
+      百度文心千帆大模型.NET SDK
+      .NET SDK for the Baidu WenXin QianFan
+    </Description>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
