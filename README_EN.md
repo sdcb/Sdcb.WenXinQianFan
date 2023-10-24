@@ -69,6 +69,7 @@ The following is a list of language models supported by Sdcb.WenXinQianFan:
 | --- | --- |
 | ERNIEBot | A large language model developed by Baidu that covers a vast amount of Chinese data and has strong abilities in dialogue question and answer, content creation and generation. |
 | ERNIEBotTurbo | A large language model developed by Baidu that covers a vast amount of Chinese data and has strong abilities in dialogue question and answer, content creation and generation with a faster response speed. |
+| ERNIE-Bot-4 | A large language model independently developed by Baidu, covering massive amounts of Chinese data. It has enhanced abilities in dialogue answering and content creation generation. |
 | BLOOMZ_7B | A well-known large language model developed and open-sourced by BigScience that can output text in 46 languages and 13 programming languages. |
 | Llama2_7bChat | Developed and open-sourced by Meta AI. It performs well in coding, reasoning, and knowledge application scenarios. Llama-2-7b-chat is a high-performance native open-source version suitable for dialogue scenarios. |
 | Llama2_13bChat | Developed and open-sourced by Meta AI. It performs well in coding, reasoning, and knowledge application scenarios. Llama-2-13b-chat is a balanced native open-source version in terms of performance and results, suitable for dialogue scenarios. |
