@@ -14,6 +14,9 @@ public record KnownModel(string Name, string Url)
     /// <summary>ERNIE-Bot-turbo is a large language model developed by Baidu, covering a large amount of Chinese data, with stronger capabilities in dialogue QA, content creation generation, etc., and faster response speed.</summary>
     public static KnownModel ERNIEBotTurbo => new KnownModel("ERNIE-Bot-turbo", BaseUrl + "eb-instant");
 
+    /// <summary>ERNIE-Bot-turbo is a large language model developed by Baidu, covering a large amount of Chinese data, with stronger capabilities in dialogue QA, content creation generation, etc., and faster response speed.</summary>
+    public static KnownModel ERNIEBot4 => new KnownModel("ERNIE-Bot-4", BaseUrl + "completions_pro");
+
     /// <summary>BLOOMZ-7B is a well-known large language model developed and open-sourced by BigScience, capable of outputting text in 46 languages and 13 programming languages.</summary>
     public static KnownModel BLOOMZ_7B => new KnownModel("BLOOMZ-7B", BaseUrl + "bloomz_7b1");
 

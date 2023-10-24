@@ -1,4 +1,4 @@
-using Microsoft.Extensions.Configuration;
+ï»¿using Microsoft.Extensions.Configuration;
 using System.Text;
 using Xunit.Abstractions;
 
@@ -21,9 +21,9 @@ namespace Sdcb.WenXinQianFan.Tests
         {
             string? apiKey = Config["QianFanConfig:ApiKey"];
             string? apiSecret = Config["QianFanConfig:ApiSecret"];
-#pragma warning disable CS8604 // ÒıÓÃÀàĞÍ²ÎÊı¿ÉÄÜÎª null¡£
+#pragma warning disable CS8604 // å¼•ç”¨ç±»å‹å‚æ•°å¯èƒ½ä¸º nullã€‚
             return new QianFanClient(apiKey, apiSecret);
-#pragma warning restore CS8604 // ÒıÓÃÀàĞÍ²ÎÊı¿ÉÄÜÎª null¡£
+#pragma warning restore CS8604 // å¼•ç”¨ç±»å‹å‚æ•°å¯èƒ½ä¸º nullã€‚
         }
 
         public UnitTest1(ITestOutputHelper console)
@@ -36,7 +36,7 @@ namespace Sdcb.WenXinQianFan.Tests
         {
             StringBuilder sb = new();
             QianFanClient c = CreateAPIClient();
-            await foreach (StreamedChatResponse msg in c.ChatAsStreamAsync(KnownModel.ERNIEBot, new ChatMessage[] { ChatMessage.FromUser("ºşÄÏµÄÊ¡»áÔÚÄÄ£¿") }, new ChatRequestParameters
+            await foreach (StreamedChatResponse msg in c.ChatAsStreamAsync(KnownModel.ERNIEBot, new ChatMessage[] { ChatMessage.FromUser("æ¹–å—çš„çœä¼šåœ¨å“ªï¼Ÿ") }, new ChatRequestParameters
             {
                 Temperature = 0.5f,
                 PenaltyScore = 2.0f,
@@ -47,7 +47,7 @@ namespace Sdcb.WenXinQianFan.Tests
                 sb.Append(msg.Result);
             }
 
-            Assert.Contains("³¤É³", sb.ToString());
+            Assert.Contains("é•¿æ²™", sb.ToString());
             _console.WriteLine(sb.ToString());
         }
 
@@ -57,12 +57,26 @@ namespace Sdcb.WenXinQianFan.Tests
             QianFanClient c = CreateAPIClient();
             ChatResponse msg = await c.ChatAsync(KnownModel.ERNIEBotTurbo, new ChatMessage[]
             {
-                ChatMessage.FromUser("ÏµÍ³ÌáÊ¾£ºÄã½ĞÕÅÈı£¬Ò»Ãû5ËêÄĞº¢£¬ÄãÔÚ½ğÉ«Ò¡ÀºÓ×¶ùÔ°ÉÏÑ§£¬ÄãµÄÂèÂè½ĞÀîËÄ£¬ÊÇÒ»Ãû¹¤³ÌÊ¦"),
-                ChatMessage.FromAssistant("Ã÷°×"),
-                ChatMessage.FromUser("ÄãºÃĞ¡ÅóÓÑ£¬ÎÒÊÇÖÜÀÏÊ¦£¬ÄãÔÚÄÄÉÏÑ§£¿"),
+                ChatMessage.FromUser("ç³»ç»Ÿæç¤ºï¼šä½ å«å¼ ä¸‰ï¼Œä¸€å5å²ç”·å­©ï¼Œä½ åœ¨é‡‘è‰²æ‘‡ç¯®å¹¼å„¿å›­ä¸Šå­¦ï¼Œä½ çš„å¦ˆå¦ˆå«æå››ï¼Œæ˜¯ä¸€åå·¥ç¨‹å¸ˆ"),
+                ChatMessage.FromAssistant("æ˜ç™½"),
+                ChatMessage.FromUser("ä½ å¥½å°æœ‹å‹ï¼Œæˆ‘æ˜¯å‘¨è€å¸ˆï¼Œä½ åœ¨å“ªä¸Šå­¦ï¼Ÿ"),
             });
             _console.WriteLine(msg.Result);
-            Assert.Contains("½ğÉ«Ò¡ÀºÓ×¶ùÔ°", msg.Result);
+            Assert.Contains("é‡‘è‰²æ‘‡ç¯®å¹¼å„¿å›­", msg.Result);
+        }
+
+        [Fact]
+        public async Task ChatV4AsyncTest()
+        {
+            QianFanClient c = CreateAPIClient();
+            ChatResponse msg = await c.ChatAsync(KnownModel.ERNIEBot4, new ChatMessage[]
+            {
+                ChatMessage.FromUser("ç³»ç»Ÿæç¤ºï¼šä½ å«å¼ ä¸‰ï¼Œä¸€å5å²ç”·å­©ï¼Œä½ åœ¨é‡‘è‰²æ‘‡ç¯®å¹¼å„¿å›­ä¸Šå­¦ï¼Œä½ çš„å¦ˆå¦ˆå«æå››ï¼Œæ˜¯ä¸€åå·¥ç¨‹å¸ˆ"),
+                ChatMessage.FromAssistant("æ˜ç™½"),
+                ChatMessage.FromUser("ä½ å¥½å°æœ‹å‹ï¼Œæˆ‘æ˜¯å‘¨è€å¸ˆï¼Œä½ åœ¨å“ªä¸Šå­¦ï¼Ÿ"),
+            });
+            _console.WriteLine(msg.Result);
+            Assert.Contains("é‡‘è‰²æ‘‡ç¯®å¹¼å„¿å›­", msg.Result);
         }
     }
 }
