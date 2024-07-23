@@ -1,55 +1,55 @@
-# Sdcb.WenXinQianFan [![NuGet](https://img.shields.io/nuget/v/Sdcb.WenXinQianFan.svg?style=flat-square&label=nuget)](https://www.nuget.org/packages/Sdcb.WenXinQianFan/) [![NuGet](https://img.shields.io/nuget/dt/Sdcb.WenXinQianFan.svg?style=flat-square)](https://www.nuget.org/packages/Sdcb.WenXinQianFan/) [![GitHub](https://img.shields.io/github/license/sdcb/Sdcb.WenXinQianFan.svg?style=flat-square&label=license)](https://github.com/sdcb/Sdcb.WenXinQianFan/blob/master/LICENSE.txt)
+ï»¿# Sdcb.WenXinQianFan [![NuGet](https://img.shields.io/nuget/v/Sdcb.WenXinQianFan.svg?style=flat-square&label=nuget)](https://www.nuget.org/packages/Sdcb.WenXinQianFan/) [![NuGet](https://img.shields.io/nuget/dt/Sdcb.WenXinQianFan.svg?style=flat-square)](https://www.nuget.org/packages/Sdcb.WenXinQianFan/) [![GitHub](https://img.shields.io/github/license/sdcb/Sdcb.WenXinQianFan.svg?style=flat-square&label=license)](https://github.com/sdcb/Sdcb.WenXinQianFan/blob/master/LICENSE.txt)
 
-**[English](README_EN.md)** | **¼òÌåÖĞÎÄ**
+**[English](README_EN.md)** | **ç®€ä½“ä¸­æ–‡**
 
-`Sdcb.WenXinQianFan`ÊÇÒ»¸ö·Ç¹Ù·½µÄ¿ªÔ´ÏîÄ¿£¬Ìá¹©WenXin QianFan API µÄ .NET ¿Í»§¶Ë¡£Õâ¸öÏîÄ¿¿ÉÒÔÓÃÀ´¿ª·¢ÄÜ¹»ÓÃ×ÔÈ»ÓïÑÔÓëÓÃ»§½»Á÷µÄÁÄÌì»úÆ÷ÈËºÍĞéÄâÖúÊÖ¡£
+`Sdcb.WenXinQianFan`æ˜¯ä¸€ä¸ªéå®˜æ–¹çš„å¼€æºé¡¹ç›®ï¼Œæä¾›WenXin QianFan API çš„ .NET å®¢æˆ·ç«¯ã€‚è¿™ä¸ªé¡¹ç›®å¯ä»¥ç”¨æ¥å¼€å‘èƒ½å¤Ÿç”¨è‡ªç„¶è¯­è¨€ä¸ç”¨æˆ·äº¤æµçš„èŠå¤©æœºå™¨äººå’Œè™šæ‹ŸåŠ©æ‰‹ã€‚
 
-## ¹¦ÄÜ
+## åŠŸèƒ½
 
-- Îª WenXin QianFan API Ìá¹© .NET ¿Í»§¶Ë¡£
-- Ö§³ÖÍ¬²½ºÍÒì²½Í¨ĞÅ¡£
-- ÊµÏÖÁËÁ÷API£¬ÒÔÊµÏÖÊµÊ±Í¨ĞÅ¡£
-- ÎªÁÄÌì»úÆ÷ÈË¿ª·¢Ìá¹©ÁË¼òµ¥Ö±¹ÛµÄAPI¡£
+- ä¸º WenXin QianFan API æä¾› .NET å®¢æˆ·ç«¯ã€‚
+- æ”¯æŒåŒæ­¥å’Œå¼‚æ­¥é€šä¿¡ã€‚
+- å®ç°äº†æµAPIï¼Œä»¥å®ç°å®æ—¶é€šä¿¡ã€‚
+- ä¸ºèŠå¤©æœºå™¨äººå¼€å‘æä¾›äº†ç®€å•ç›´è§‚çš„APIã€‚
 
-## °²×°
+## å®‰è£…
 
-Í¨¹ıNuGet¿ÉÒÔ°²×° `Sdcb.WenXinQianFan`¡£ ÔÚ³ÌĞò°ü¹ÜÀíÆ÷¿ØÖÆÌ¨ÖĞÔËĞĞÒÔÏÂÃüÁîÒÔ°²×°Èí¼ş°ü£º
+é€šè¿‡NuGetå¯ä»¥å®‰è£… `Sdcb.WenXinQianFan`ã€‚ åœ¨ç¨‹åºåŒ…ç®¡ç†å™¨æ§åˆ¶å°ä¸­è¿è¡Œä»¥ä¸‹å‘½ä»¤ä»¥å®‰è£…è½¯ä»¶åŒ…ï¼š
 
 ```
 Install-Package Sdcb.WenXinQianFan
 ```
 
-## Ê¹ÓÃ·½·¨
+## ä½¿ç”¨æ–¹æ³•
 
-ÒªÊ¹ÓÃ Sdcb.WenXinQianFan£¬ÄúĞèÒª´´½¨Ò»¸ö `QianFanClient` ÀàÊµÀı¡£Äú¿ÉÒÔÍ¨¹ı½«WenXin QianFan APIÆ¾¾İ´«µİ¸ø¹¹Ôìº¯ÊıÀ´´´½¨¿Í»§¶Ë£º
+è¦ä½¿ç”¨ Sdcb.WenXinQianFanï¼Œæ‚¨éœ€è¦åˆ›å»ºä¸€ä¸ª `QianFanClient` ç±»å®ä¾‹ã€‚æ‚¨å¯ä»¥é€šè¿‡å°†WenXin QianFan APIå‡­æ®ä¼ é€’ç»™æ„é€ å‡½æ•°æ¥åˆ›å»ºå®¢æˆ·ç«¯ï¼š
 
 ```csharp
 QianFanClient client = new QianFanClient(apiKey, apiSecret);
 ```
 
-### Ê¾Àı1£ºÊ¹ÓÃÍ¬²½APIÓëĞéÄâÖúÊÖÁÄÌì
+### ç¤ºä¾‹1ï¼šä½¿ç”¨åŒæ­¥APIä¸è™šæ‹ŸåŠ©æ‰‹èŠå¤©
 
-ÒÔÏÂÊ¾ÀıÏÔÊ¾ÁËÈçºÎÊ¹ÓÃ `ChatAsync` ·½·¨ÓëĞéÄâÖúÊÖÁÄÌì£º
+ä»¥ä¸‹ç¤ºä¾‹æ˜¾ç¤ºäº†å¦‚ä½•ä½¿ç”¨ `ChatAsync` æ–¹æ³•ä¸è™šæ‹ŸåŠ©æ‰‹èŠå¤©ï¼š
 
 ```csharp
 QianFanClient c = new QianFanClient(apiKey, apiSecret);
-ChatResponse msg = await c.ChatAsync(KnownModel.ERNIEBotTurbo, new ChatMessage[]
+ChatResponse msg = await c.ChatAsync(KnownModel.ERNIE_40_8K, new ChatMessage[]
 {
-    ChatMessage.FromUser("ÏµÍ³ÌáÊ¾£ºÄã½ĞÕÅÈı£¬Ò»Ãû5ËêÄĞº¢£¬ÄãÔÚ½ğÉ«Ò¡ÀºÓ×¶ùÔ°ÉÏÑ§£¬ÄãµÄÂèÂè½ĞÀîËÄ£¬ÊÇÒ»Ãû¹¤³ÌÊ¦"),
-    ChatMessage.FromAssistant("Ã÷°×"),
-    ChatMessage.FromUser("ÄãºÃĞ¡ÅóÓÑ£¬ÎÒÊÇÖÜÀÏÊ¦£¬ÄãÔÚÄÄÉÏÑ§£¿"),
+    ChatMessage.FromUser("ç³»ç»Ÿæç¤ºï¼šä½ å«å¼ ä¸‰ï¼Œä¸€å5å²ç”·å­©ï¼Œä½ åœ¨é‡‘è‰²æ‘‡ç¯®å¹¼å„¿å›­ä¸Šå­¦ï¼Œä½ çš„å¦ˆå¦ˆå«æå››ï¼Œæ˜¯ä¸€åå·¥ç¨‹å¸ˆ"),
+    ChatMessage.FromAssistant("æ˜ç™½"),
+    ChatMessage.FromUser("ä½ å¥½å°æœ‹å‹ï¼Œæˆ‘æ˜¯å‘¨è€å¸ˆï¼Œä½ åœ¨å“ªä¸Šå­¦ï¼Ÿ"),
 });
 Console.WriteLine(msg.Result);
 ```
 
-### Ê¾Àı2£ºÊ¹ÓÃÁ÷APIÓëĞéÄâÖúÊÖÁÄÌì
+### ç¤ºä¾‹2ï¼šä½¿ç”¨æµAPIä¸è™šæ‹ŸåŠ©æ‰‹èŠå¤©
 
-ÒÔÏÂÊ¾ÀıÏÔÊ¾ÁËÈçºÎÊ¹ÓÃ `ChatAsStreamAsync` ·½·¨ÒÔ¼°Á÷APIÓëĞéÄâÖúÊÖÁÄÌì£º
+ä»¥ä¸‹ç¤ºä¾‹æ˜¾ç¤ºäº†å¦‚ä½•ä½¿ç”¨ `ChatAsStreamAsync` æ–¹æ³•ä»¥åŠæµAPIä¸è™šæ‹ŸåŠ©æ‰‹èŠå¤©ï¼š
 
 ```csharp
 StringBuilder sb = new StringBuilder();
 QianFanClient c = new QianFanClient(apiKey, apiSecret);
-await foreach (StreamedChatResponse msg in c.ChatAsStreamAsync(KnownModel.ERNIEBot, new ChatMessage[] { ChatMessage.FromUser("ºşÄÏµÄÊ¡»áÔÚÄÄ£¿") }, new ChatRequestParameters
+await foreach (StreamedChatResponse msg in c.ChatAsStreamAsync(KnownModel.ERNIE_35_8K, new ChatMessage[] { ChatMessage.FromUser("æ¹–å—çš„çœä¼šåœ¨å“ªï¼Ÿ") }, new ChatRequestParameters
 {
     Temperature = 0.5f,
     PenaltyScore = 2.0f,
@@ -61,25 +61,26 @@ await foreach (StreamedChatResponse msg in c.ChatAsStreamAsync(KnownModel.ERNIEB
 Console.WriteLine(sb.ToString());
 ```
 
-## Ö§³ÖµÄÄ£ĞÍ
+## æ”¯æŒçš„æ¨¡å‹
 
-ÒÔÏÂÊÇ Sdcb.WenXinQianFan Ö§³ÖµÄÓïÑÔÄ£ĞÍÁĞ±í£º
+ä»¥ä¸‹æ˜¯ Sdcb.WenXinQianFan æ”¯æŒçš„è¯­è¨€æ¨¡å‹åˆ—è¡¨ï¼š
 
-| Ä£ĞÍ | ÃèÊö |
+| æ¨¡å‹ | æè¿° |
 | --- | --- |
-| ERNIEBot | °Ù¶È×ÔĞĞÑĞ·¢µÄ´óÓïÑÔÄ£ĞÍ£¬¸²¸Çº£Á¿ÖĞÎÄÊı¾İ£¬¾ßÓĞ¸üÇ¿µÄ¶Ô»°ÎÊ´ğ¡¢ÄÚÈİ´´×÷Éú³ÉµÈÄÜÁ¦¡£ |
-| ERNIEBotTurbo | °Ù¶È×ÔĞĞÑĞ·¢µÄ´óÓïÑÔÄ£ĞÍ£¬¸²¸Çº£Á¿ÖĞÎÄÊı¾İ£¬¾ßÓĞ¸üÇ¿µÄ¶Ô»°ÎÊ´ğ¡¢ÄÚÈİ´´×÷Éú³ÉµÈÄÜÁ¦£¬ÏìÓ¦ËÙ¶È¸ü¿ì¡£ |
-| BLOOMZ_7B | ÒµÄÚÖªÃûµÄ´óÓïÑÔÄ£ĞÍ£¬ÓÉBigScienceÑĞ·¢²¢¿ªÔ´£¬ÄÜ¹»ÒÔ46ÖÖÓïÑÔºÍ13ÖÖ±à³ÌÓïÑÔÊä³öÎÄ±¾¡£ |
-| Llama2_7bChat | Meta AIÑĞ·¢²¢¿ªÔ´£¬ÔÚ±àÂë¡¢ÍÆÀí¼°ÖªÊ¶Ó¦ÓÃµÈ³¡¾°±íÏÖÓÅĞã£¬Llama-2-7b-chatÊÇ¸ßĞÔÄÜÔ­Éú¿ªÔ´°æ±¾£¬ÊÊÓÃÓÚ¶Ô»°³¡¾°¡£ |
-| Llama2_13bChat | Meta AIÑĞ·¢²¢¿ªÔ´£¬ÔÚ±àÂë¡¢ÍÆÀí¼°ÖªÊ¶Ó¦ÓÃµÈ³¡¾°±íÏÖÓÅĞã£¬Llama-2-13b-chatÊÇĞÔÄÜÓëĞ§¹û¾ùºâµÄÔ­Éú¿ªÔ´°æ±¾£¬ÊÊÓÃÓÚ¶Ô»°³¡¾°¡£ |
-| Llama2_70bChat | Meta AIÑĞ·¢²¢¿ªÔ´£¬ÔÚ±àÂë¡¢ÍÆÀí¼°ÖªÊ¶Ó¦ÓÃµÈ³¡¾°±íÏÖÓÅĞã£¬Llama-2-70b-chatÊÇ¸ß¾«¶ÈĞ§¹ûµÄÔ­Éú¿ªÔ´°æ±¾¡£ |
-| QianfanBLOOMZ_7BCompressed | Ç§·«ÍÅ¶ÓÔÚBLOOMZ-7B»ù´¡ÉÏµÄÑ¹Ëõ°æ±¾£¬ÈÚºÏÁ¿»¯¡¢Ï¡Êè»¯µÈ¼¼Êõ£¬ÏÔ´æÕ¼ÓÃ½µµÍ30%ÒÔÉÏ¡£ |
-| QianfanChineseLlama2_7B | Ç§·«ÍÅ¶ÓÔÚLlama-2-7b»ù´¡ÉÏµÄÖĞÎÄÔöÇ¿°æ±¾£¬ÔÚCMMLU¡¢C-EVALµÈÖĞÎÄÊı¾İ¼¯ÉÏ±íÏÖÓÅÒì¡£ |
-| ChatGLM2_6B_32K | ÖÇÆ×AIÓëÇå»ªKEGÊµÑéÊÒ·¢²¼µÄÖĞÓ¢Ë«Óï¶Ô»°Ä£ĞÍ£¬ÄÜ¹»¸üºÃµÄ´¦Àí×î¶à32K³¤¶ÈµÄÉÏÏÂÎÄ¡£ |
-| AquilaChat_7B | ÓÉÖÇÔ´ÑĞ¾¿ÔºÑĞ·¢£¬»ùÓÚAquila-7BÑµÁ·µÄ¶Ô»°Ä£ĞÍ£¬Ö§³ÖÁ÷³©µÄÎÄ±¾¶Ô»°¼°¶àÖÖÓïÑÔÀàÉú³ÉÈÎÎñ£¬Í¨¹ı¶¨Òå¿ÉÀ©Õ¹µÄÌØÊâÖ¸Áî¹æ·¶£¬ÊµÏÖ AquilaChat¶ÔÆäËüÄ£ĞÍºÍ¹¤¾ßµÄµ÷ÓÃ£¬ÇÒÒ×ÓÚÀ©Õ¹¡£ |
+| ERNIEBot | ç™¾åº¦è‡ªè¡Œç ”å‘çš„å¤§è¯­è¨€æ¨¡å‹ï¼Œè¦†ç›–æµ·é‡ä¸­æ–‡æ•°æ®ï¼Œå…·æœ‰æ›´å¼ºçš„å¯¹è¯é—®ç­”ã€å†…å®¹åˆ›ä½œç”Ÿæˆç­‰èƒ½åŠ›ã€‚ |
+| ERNIEBotTurbo | ç™¾åº¦è‡ªè¡Œç ”å‘çš„å¤§è¯­è¨€æ¨¡å‹ï¼Œè¦†ç›–æµ·é‡ä¸­æ–‡æ•°æ®ï¼Œå…·æœ‰æ›´å¼ºçš„å¯¹è¯é—®ç­”ã€å†…å®¹åˆ›ä½œç”Ÿæˆç­‰èƒ½åŠ›ï¼Œå“åº”é€Ÿåº¦æ›´å¿«ã€‚ |
+| ERNIE-Bot-4 | ERNIE-Bot-4æ˜¯ç™¾åº¦è‡ªè¡Œç ”å‘çš„å¤§è¯­è¨€æ¨¡å‹ï¼Œè¦†ç›–æµ·é‡ä¸­æ–‡æ•°æ®ï¼Œå…·æœ‰æ›´å¼ºçš„å¯¹è¯é—®ç­”ã€å†…å®¹åˆ›ä½œç”Ÿæˆç­‰èƒ½åŠ›ã€‚ |
+| BLOOMZ_7B | ä¸šå†…çŸ¥åçš„å¤§è¯­è¨€æ¨¡å‹ï¼Œç”±BigScienceç ”å‘å¹¶å¼€æºï¼Œèƒ½å¤Ÿä»¥46ç§è¯­è¨€å’Œ13ç§ç¼–ç¨‹è¯­è¨€è¾“å‡ºæ–‡æœ¬ã€‚ |
+| Llama2_7bChat | Meta AIç ”å‘å¹¶å¼€æºï¼Œåœ¨ç¼–ç ã€æ¨ç†åŠçŸ¥è¯†åº”ç”¨ç­‰åœºæ™¯è¡¨ç°ä¼˜ç§€ï¼ŒLlama-2-7b-chatæ˜¯é«˜æ€§èƒ½åŸç”Ÿå¼€æºç‰ˆæœ¬ï¼Œé€‚ç”¨äºå¯¹è¯åœºæ™¯ã€‚ |
+| Llama2_13bChat | Meta AIç ”å‘å¹¶å¼€æºï¼Œåœ¨ç¼–ç ã€æ¨ç†åŠçŸ¥è¯†åº”ç”¨ç­‰åœºæ™¯è¡¨ç°ä¼˜ç§€ï¼ŒLlama-2-13b-chatæ˜¯æ€§èƒ½ä¸æ•ˆæœå‡è¡¡çš„åŸç”Ÿå¼€æºç‰ˆæœ¬ï¼Œé€‚ç”¨äºå¯¹è¯åœºæ™¯ã€‚ |
+| Llama2_70bChat | Meta AIç ”å‘å¹¶å¼€æºï¼Œåœ¨ç¼–ç ã€æ¨ç†åŠçŸ¥è¯†åº”ç”¨ç­‰åœºæ™¯è¡¨ç°ä¼˜ç§€ï¼ŒLlama-2-70b-chatæ˜¯é«˜ç²¾åº¦æ•ˆæœçš„åŸç”Ÿå¼€æºç‰ˆæœ¬ã€‚ |
+| QianfanBLOOMZ_7BCompressed | åƒå¸†å›¢é˜Ÿåœ¨BLOOMZ-7BåŸºç¡€ä¸Šçš„å‹ç¼©ç‰ˆæœ¬ï¼Œèåˆé‡åŒ–ã€ç¨€ç–åŒ–ç­‰æŠ€æœ¯ï¼Œæ˜¾å­˜å ç”¨é™ä½30%ä»¥ä¸Šã€‚ |
+| QianfanChineseLlama2_7B | åƒå¸†å›¢é˜Ÿåœ¨Llama-2-7båŸºç¡€ä¸Šçš„ä¸­æ–‡å¢å¼ºç‰ˆæœ¬ï¼Œåœ¨CMMLUã€C-EVALç­‰ä¸­æ–‡æ•°æ®é›†ä¸Šè¡¨ç°ä¼˜å¼‚ã€‚ |
+| ChatGLM2_6B_32K | æ™ºè°±AIä¸æ¸…åKEGå®éªŒå®¤å‘å¸ƒçš„ä¸­è‹±åŒè¯­å¯¹è¯æ¨¡å‹ï¼Œèƒ½å¤Ÿæ›´å¥½çš„å¤„ç†æœ€å¤š32Ké•¿åº¦çš„ä¸Šä¸‹æ–‡ã€‚ |
+| AquilaChat_7B | ç”±æ™ºæºç ”ç©¶é™¢ç ”å‘ï¼ŒåŸºäºAquila-7Bè®­ç»ƒçš„å¯¹è¯æ¨¡å‹ï¼Œæ”¯æŒæµç•…çš„æ–‡æœ¬å¯¹è¯åŠå¤šç§è¯­è¨€ç±»ç”Ÿæˆä»»åŠ¡ï¼Œé€šè¿‡å®šä¹‰å¯æ‰©å±•çš„ç‰¹æ®ŠæŒ‡ä»¤è§„èŒƒï¼Œå®ç° AquilaChatå¯¹å…¶å®ƒæ¨¡å‹å’Œå·¥å…·çš„è°ƒç”¨ï¼Œä¸”æ˜“äºæ‰©å±•ã€‚ |
 
-×îĞÂµÄÁĞ±í¿ÉÒÔÔÚ[¹ÙÍøÕâÀï](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/Nlks5zkzu)ÁË½â¡£
+æœ€æ–°çš„åˆ—è¡¨å¯ä»¥åœ¨[å®˜ç½‘è¿™é‡Œ](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/Nlks5zkzu)äº†è§£ã€‚
 
-## Ğí¿ÉÖ¤
+## è®¸å¯è¯
 
-Sdcb.WenXinQianFan ×ñÑ­ MIT Ğí¿ÉÖ¤¡£ Çë²ÎÔÄ[LICENSE.txt](LICENSE.txt)ÎÄ¼şÒÔ»ñÈ¡¸ü¶àĞÅÏ¢¡£
+Sdcb.WenXinQianFan éµå¾ª MIT è®¸å¯è¯ã€‚ è¯·å‚é˜…[LICENSE.txt](LICENSE.txt)æ–‡ä»¶ä»¥è·å–æ›´å¤šä¿¡æ¯ã€‚

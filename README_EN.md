@@ -33,7 +33,7 @@ The following example shows how to use the `ChatAsync` method to chat with a vir
 
 ```csharp
 QianFanClient c = new QianFanClient(apiKey, apiSecret);
-ChatResponse msg = await c.ChatAsync(KnownModel.ERNIEBotTurbo, new ChatMessage[]
+ChatResponse msg = await c.ChatAsync(KnownModel.ERNIE_40_8K, new ChatMessage[]
 {
     ChatMessage.FromUser("System prompt: Your name is Zhang San, a 5-year-old boy, you go to school at the Golden Cradle Kindergarten, your mother is Li Si, an engineer"),
     ChatMessage.FromAssistant("Understood"),
@@ -49,7 +49,7 @@ The following example shows how to use the `ChatAsStreamAsync` method and the st
 ```csharp
 StringBuilder sb = new StringBuilder();
 QianFanClient c = new QianFanClient(apiKey, apiSecret);
-await foreach (StreamedChatResponse msg in c.ChatAsStreamAsync(KnownModel.ERNIEBot, new ChatMessage[] { ChatMessage.FromUser("Where is the capital of Hunan?") }, new ChatRequestParameters
+await foreach (StreamedChatResponse msg in c.ChatAsStreamAsync(KnownModel.ERNIE_35_8K, new ChatMessage[] { ChatMessage.FromUser("Where is the capital of Hunan?") }, new ChatRequestParameters
 {
     Temperature = 0.5f,
     PenaltyScore = 2.0f,
@@ -69,6 +69,7 @@ The following is a list of language models supported by Sdcb.WenXinQianFan:
 | --- | --- |
 | ERNIEBot | A large language model developed by Baidu that covers a vast amount of Chinese data and has strong abilities in dialogue question and answer, content creation and generation. |
 | ERNIEBotTurbo | A large language model developed by Baidu that covers a vast amount of Chinese data and has strong abilities in dialogue question and answer, content creation and generation with a faster response speed. |
+| ERNIE-Bot-4 | A large language model independently developed by Baidu, covering massive amounts of Chinese data. It has enhanced abilities in dialogue answering and content creation generation. |
 | BLOOMZ_7B | A well-known large language model developed and open-sourced by BigScience that can output text in 46 languages and 13 programming languages. |
 | Llama2_7bChat | Developed and open-sourced by Meta AI. It performs well in coding, reasoning, and knowledge application scenarios. Llama-2-7b-chat is a high-performance native open-source version suitable for dialogue scenarios. |
 | Llama2_13bChat | Developed and open-sourced by Meta AI. It performs well in coding, reasoning, and knowledge application scenarios. Llama-2-13b-chat is a balanced native open-source version in terms of performance and results, suitable for dialogue scenarios. |
