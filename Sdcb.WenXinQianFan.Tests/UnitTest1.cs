@@ -52,14 +52,16 @@ namespace Sdcb.WenXinQianFan.Tests
         }
 
         [Fact]
-        public async Task ChatAsyncTest()
+        public async Task SystemPromptTest()
         {
             QianFanClient c = CreateAPIClient();
             ChatResponse msg = await c.ChatAsync(KnownModel.ERNIEBotTurbo, new ChatMessage[]
             {
-                ChatMessage.FromUser("系统提示：你叫张三，一名5岁男孩，你在金色摇篮幼儿园上学，你的妈妈叫李四，是一名工程师"),
-                ChatMessage.FromAssistant("明白"),
                 ChatMessage.FromUser("你好小朋友，我是周老师，你在哪上学？"),
+            }, new ChatRequestParameters()
+            {
+                System = "你叫张三，一名5岁男孩，你在金色摇篮幼儿园上学，你的妈妈叫李四，是一名工程师",
+                DisableSearch = true, 
             });
             _console.WriteLine(msg.Result);
             Assert.Contains("金色摇篮幼儿园", msg.Result);
