@@ -36,7 +36,7 @@ namespace Sdcb.WenXinQianFan.Tests
         {
             StringBuilder sb = new();
             QianFanClient c = CreateAPIClient();
-            await foreach (StreamedChatResponse msg in c.ChatAsStreamAsync(KnownModel.ERNIEBot, new ChatMessage[] { ChatMessage.FromUser("湖南的省会在哪？") }, new ChatRequestParameters
+            await foreach (StreamedChatResponse msg in c.ChatAsStreamAsync(KnownModel.ERNIE_40_8K, new ChatMessage[] { ChatMessage.FromUser("湖南的省会在哪？") }, new ChatRequestParameters
             {
                 Temperature = 0.5f,
                 UserId = "zhoujie",
@@ -55,7 +55,7 @@ namespace Sdcb.WenXinQianFan.Tests
         public async Task SystemPromptTest()
         {
             QianFanClient c = CreateAPIClient();
-            ChatResponse msg = await c.ChatAsync(KnownModel.ERNIEBotTurbo, new ChatMessage[]
+            ChatResponse msg = await c.ChatAsync(KnownModel.ERNIE_Tiny_8K, new ChatMessage[]
             {
                 ChatMessage.FromUser("你好小朋友，我是周老师，你在哪上学？"),
             }, new ChatRequestParameters()
@@ -71,7 +71,7 @@ namespace Sdcb.WenXinQianFan.Tests
         public async Task ChatSearchTest()
         {
             QianFanClient c = CreateAPIClient();
-            ChatResponse msg = await c.ChatAsync(KnownModel.ERNIEBot, new ChatMessage[]
+            ChatResponse msg = await c.ChatAsync(KnownModel.ERNIE_40_8K, new ChatMessage[]
             {
                 ChatMessage.FromUser(".NET最新版本号是多少？最新版有哪些新功能？"),
             }, new ChatRequestParameters

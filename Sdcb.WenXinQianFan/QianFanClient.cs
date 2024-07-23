@@ -51,11 +51,11 @@ public class QianFanClient : IDisposable
         if (resp.IsSuccessStatusCode)
         {
             AuthToken? token = await resp.Content.ReadFromJsonAsync<AuthToken>(cancellationToken: cancellationToken);
-            return token ?? throw new Exception($"Unable to deserialize '{await resp.Content.ReadAsStringAsync()}' into {nameof(AuthToken)}.");
+            return token ?? throw new Exception($"Unable to deserialize '{await resp.Content.C_ReadAsStringAsync(cancellationToken)}' into {nameof(AuthToken)}.");
         }
         else
         {
-            throw new HttpRequestException($"{resp.ReasonPhrase}: {await resp.Content.ReadAsStringAsync()}");
+            throw new HttpRequestException($"{resp.ReasonPhrase}: {await resp.Content.C_ReadAsStringAsync(cancellationToken)}");
         }
     }
 
@@ -78,14 +78,14 @@ public class QianFanClient : IDisposable
 
         if (resp.IsSuccessStatusCode)
         {
-            ChatResponse? result = await resp.Content.ReadFromJsonAsync<ChatResponse>()
-                ?? throw new Exception($"Unable to deserialize '{await resp.Content.ReadAsStringAsync()}' into {nameof(ChatResponse)}.");
+            ChatResponse? result = await resp.Content.C_ReadFromJsonAsync<ChatResponse>(cancellationToken)
+                ?? throw new Exception($"Unable to deserialize '{await resp.Content.C_ReadAsStringAsync(cancellationToken)}' into {nameof(ChatResponse)}.");
             result.RateLimitInfo = rateLimitInfo;
             return result;
         }
         else
         {
-            throw new HttpRequestException($"{resp.ReasonPhrase}: {await resp.Content.ReadAsStringAsync()}");
+            throw new HttpRequestException($"{resp.ReasonPhrase}: {await resp.Content.C_ReadAsStringAsync(cancellationToken)}");
         }
     }
 
@@ -110,7 +110,7 @@ public class QianFanClient : IDisposable
 
         if (resp.IsSuccessStatusCode)
         {
-            using Stream stream = await resp.Content.ReadAsStreamAsync();
+            using Stream stream = await resp.Content.C_ReadAsStreamAsync(cancellationToken);
             using StreamReader reader = new(stream);
 
             string? line;
@@ -120,7 +120,7 @@ public class QianFanClient : IDisposable
                 {
                     string json = line[6..];
                     StreamedChatResponse result = JsonSerializer.Deserialize<StreamedChatResponse>(json) 
-                        ?? throw new Exception($"Unable to deserialize '{await resp.Content.ReadAsStringAsync()}' into {nameof(StreamedChatResponse)}.");
+                        ?? throw new Exception($"Unable to deserialize '{await resp.Content.C_ReadAsStringAsync(cancellationToken)}' into {nameof(StreamedChatResponse)}.");
                     result.RateLimitInfo = rateLimitInfo;
                     yield return result;
                 }
@@ -132,10 +132,14 @@ public class QianFanClient : IDisposable
         }
         else
         {
-            throw new HttpRequestException($"{resp.ReasonPhrase}: {await resp.Content.ReadAsStringAsync()}");
+            throw new HttpRequestException($"{resp.ReasonPhrase}: {await resp.Content.C_ReadAsStringAsync(cancellationToken)}");
         }
     }
 
     /// <inheritdoc/>
-    public void Dispose() => _http.Dispose();
+    public void Dispose()
+    {
+        _http.Dispose();
+        GC.SuppressFinalize(this);
+    }
 }
