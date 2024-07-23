@@ -39,8 +39,8 @@ namespace Sdcb.WenXinQianFan.Tests
             await foreach (StreamedChatResponse msg in c.ChatAsStreamAsync(KnownModel.ERNIEBot, new ChatMessage[] { ChatMessage.FromUser("湖南的省会在哪？") }, new ChatRequestParameters
             {
                 Temperature = 0.5f,
-                PenaltyScore = 2.0f,
-                UserId = "zhoujie"
+                UserId = "zhoujie",
+                DisableSearch = true,
             }))
             {
                 // append the result to the string builder
@@ -63,6 +63,29 @@ namespace Sdcb.WenXinQianFan.Tests
             });
             _console.WriteLine(msg.Result);
             Assert.Contains("金色摇篮幼儿园", msg.Result);
+        }
+
+        [Fact]
+        public async Task ChatSearchTest()
+        {
+            QianFanClient c = CreateAPIClient();
+            ChatResponse msg = await c.ChatAsync(KnownModel.ERNIEBot, new ChatMessage[]
+            {
+                ChatMessage.FromUser(".NET最新版本号是多少？最新版有哪些新功能？"),
+            }, new ChatRequestParameters
+            {
+                EnableCitation = true,
+                DisableSearch = false
+            });
+            _console.WriteLine(msg.Result);
+            Assert.NotNull(msg.SearchInfo);
+            Assert.NotNull(msg.RateLimitInfo);
+
+            _console.WriteLine("Search Results:");
+            foreach (SearchResult item in msg.SearchInfo!.SearchResults)
+            {
+                _console.WriteLine(item.Title + "(" + item.Url + ")");
+            }
         }
     }
 }

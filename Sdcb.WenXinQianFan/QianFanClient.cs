@@ -74,11 +74,14 @@ public class QianFanClient : IDisposable
         StringContent jsonContent = new(JsonSerializer.Serialize(InternalChatRequest.FromOptions(messages, options, stream: false)), Encoding.UTF8, "application/json");
 
         HttpResponseMessage resp = await _http.PostAsync($"{model.Url}?access_token={_token!.Token.AccessToken}", jsonContent, cancellationToken);
+        RateLimitInfo rateLimitInfo = RateLimitInfo.ParseHeaders(resp.Headers);
 
         if (resp.IsSuccessStatusCode)
         {
-            ChatResponse? result = await resp.Content.ReadFromJsonAsync<ChatResponse>();
-            return result ?? throw new Exception($"Unable to deserialize '{await resp.Content.ReadAsStringAsync()}' into {nameof(ChatResponse)}.");
+            ChatResponse? result = await resp.Content.ReadFromJsonAsync<ChatResponse>()
+                ?? throw new Exception($"Unable to deserialize '{await resp.Content.ReadAsStringAsync()}' into {nameof(ChatResponse)}.");
+            result.RateLimitInfo = rateLimitInfo;
+            return result;
         }
         else
         {
@@ -103,6 +106,8 @@ public class QianFanClient : IDisposable
             Content = new StringContent(JsonSerializer.Serialize(InternalChatRequest.FromOptions(messages, options, stream: true)))
         }, HttpCompletionOption.ResponseHeadersRead, cancellationToken);
 
+        RateLimitInfo rateLimitInfo = RateLimitInfo.ParseHeaders(resp.Headers);
+
         if (resp.IsSuccessStatusCode)
         {
             using Stream stream = await resp.Content.ReadAsStreamAsync();
@@ -114,8 +119,10 @@ public class QianFanClient : IDisposable
                 if (line.StartsWith("data: ", StringComparison.Ordinal))
                 {
                     string json = line[6..];
-                    StreamedChatResponse? result = JsonSerializer.Deserialize<StreamedChatResponse>(json);
-                    yield return result ?? throw new Exception($"Unable to deserialize '{await resp.Content.ReadAsStringAsync()}' into {nameof(StreamedChatResponse)}.");
+                    StreamedChatResponse result = JsonSerializer.Deserialize<StreamedChatResponse>(json) 
+                        ?? throw new Exception($"Unable to deserialize '{await resp.Content.ReadAsStringAsync()}' into {nameof(StreamedChatResponse)}.");
+                    result.RateLimitInfo = rateLimitInfo;
+                    yield return result;
                 }
                 else if (!string.IsNullOrWhiteSpace(line))
                 {
